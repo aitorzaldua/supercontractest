@@ -15,7 +15,6 @@ contract SuperContract {
         counter = 0;
         console.log("Checking the contract. Owner is: ", owner);
         console.log("Initial value of the counter: ", counter);
-        increase();
     }
 
     function increase() public {
