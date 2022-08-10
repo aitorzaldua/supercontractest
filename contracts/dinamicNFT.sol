@@ -12,7 +12,7 @@ contract NFTPLATZI is ERC721, ERC721URIStorage, Ownable, KeeperCompatibleInterfa
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
-    Counters.Counter private _indexCounter; 
+    Counters.Counter private _indexCounter;
 
     string[] uriData = ["https://gateway.pinata.cloud/ipfs/QmQrzxt1fvzoR6J91FTe58dd8Dg79CfPmPKhzhkDZKS1xP",
     "https://gateway.pinata.cloud/ipfs/QmQyEs13w12KSEhiSNHeH7LbYQ9o4na9UHWgwZAD1oNBHg",
