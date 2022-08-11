@@ -31,15 +31,19 @@ contract WeeklyNFT is ERC721, ERC721URIStorage, Ownable {
         _setTokenURI(tokenId, nftJason[0]);
     }
 
-    function selectDay(uint _tokenId) public onlyOwner {
+    function selectDay(uint _tokenId) public {
         _indexIdCounter.increment();
         uint256 indexId = _indexIdCounter.current();
-        if (indexId > 7 ) {
-            _indexIdCounter.reset();
-            _setTokenURI(_tokenId, nftJason[0]);
+        if (indexId == 7 ) {
+            reset(_tokenId);       
         } else {
             _setTokenURI(_tokenId, nftJason[indexId]);
         }
+    }
+
+    function reset(uint _tokenId) public {
+        _indexIdCounter.reset();
+        _setTokenURI(_tokenId, nftJason[0]);
     }
 
     // The following functions are overrides required by Solidity.
